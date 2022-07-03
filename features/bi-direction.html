@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    <title>PyScript Features</title>
+    <style>
+        body {
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PyScript Bi-direction Support</h1>
+
+    <!-- PyScript Bi-Direction namespaces -->
+    <py-script>
+        from js import localStorage
+
+        localStorage.setItem("text", "hello world")
+    </py-script>
+</body>
+
+</html>

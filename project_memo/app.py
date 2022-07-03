@@ -90,6 +90,8 @@ def delete_memo(e):
     get_memos()
 
 # Function to edit a memu using the key passed to parent as id
+
+
 def edit_memo(e):
     e.preventDefault()
     memo_id = e.target.classList
@@ -98,15 +100,19 @@ def edit_memo(e):
     get_memos()
 
 # Function to toggle the edit container
+
+
 def open_edit_container(e):
     memo_id = e.target.parentNode.id
-    
+
     edit_memo_container.element.classList.add("open")
     edit_memo_form.element.className = memo_id
     update_memo.element.value = memos.getItem(memo_id)
 
 
 def close_edit_container():
+    edit_memo_form.element.className = ""
+    update_memo.element.value = ""
     edit_memo_container.element.classList.remove("open")
 
 

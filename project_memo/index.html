@@ -15,7 +15,7 @@
     body {
         margin: 40px;
     }
-
+    
     h1.heading {
         text-align: center;
         font-size: 24px;
@@ -38,6 +38,10 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .w-100 {
+        min-width: 100%;
     }
 
     .add-container {
@@ -155,6 +159,10 @@
                 <input placeholder="Enter updated memo" required type="text" name="update-memo" id="update-memo">
                 <button type="submit">
                     Update Memo
+                </button>
+
+                <button class="delete-btn w-100" py-onClick="close_edit_container">
+                   Close
                 </button>
             </form>
         </div>

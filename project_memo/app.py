@@ -38,6 +38,15 @@ def get_next_memo_id():
 
     return next_id + 1
 
+# Function to fetch and append all memos to the document
+
+
+def get_memos():
+    # Clean inside the memo container lelement
+    memo_container.element.innerHTML = ""
+    # loop through all memo to append them to the memo container
+    Object.entries(memos).forEach(memo_entries_loop)
+
 
 def memo_entries_loop(memo_list, _, __):
     key = str(memo_list[0])
@@ -73,15 +82,6 @@ def memo_entries_loop(memo_list, _, __):
     memo_container.element.appendChild(
         memo_elem)
 
-# Function to fetch and append all memos to the document
-
-
-def get_memos():
-    # Clean inside the memo container lelement
-    memo_container.element.innerHTML = ""
-
-    # loop through all memo to append them to the memo container
-    Object.entries(memos).forEach(memo_entries_loop)
 
 # Function to delete a memu using the key passed to parent as id
 def delete_memo(e):
